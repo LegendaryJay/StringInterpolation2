@@ -5,8 +5,6 @@ using StringInterpolationTemplate.Services;
 using StringInterpolationTemplate.Utils;
 using Xunit;
 
-namespace StringInterpolationTemplate.Tests;
-
 public class StringInterpolationServiceTests
 {
     private readonly StringInterpolationService _service;
@@ -93,10 +91,18 @@ public class StringInterpolationServiceTests
     }
 
     [Fact]
-    public void StringInterpolationService_Number10_Success()
+    public void  StringInterpolationService_Number10_Success()
     {
         var response = _service.Number10();
 
         Assert.Equal("     3.142", response);
+    }
+    [Fact]
+    public void  StringInterpolationService_Number11_Success()
+    {
+        var response = _service.Number11();
+        //I have 0 idea what you want this answer to be or what it should be or how to go about it. The way you said
+        //leads to formatting errors best I can tell
+        Assert.Equal("CD-3B-7F-66-9E-A0-F6-3F", response);
     }
 }
